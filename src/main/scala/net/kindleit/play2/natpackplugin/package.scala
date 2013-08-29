@@ -125,8 +125,6 @@ fi
   private[natpackplugin] def startFileContent(config: String) = format(
 """#!/usr/bin/env sh
 
-//exec java $* -cp "`dirname $0`/lib/*" %s play.core.server.NettyServer `dirname $0` $@
-//""", if (config.isEmpty()) "" else "-Dconfig.file=`dirname $0`/application.conf")
 exec java $* -cp "`dirname $0`/lib/*" %s play.core.server.NettyServer `dirname $0` $@
 """, if (config.isEmpty()) "-Dconfig.file=`dirname $0`/application.conf" else "-Dconfig.file="+config+"/application.conf")
 
