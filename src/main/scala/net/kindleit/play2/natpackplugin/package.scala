@@ -128,7 +128,7 @@ fi
 //exec java $* -cp "`dirname $0`/lib/*" %s play.core.server.NettyServer `dirname $0` $@
 //""", if (config.isEmpty()) "" else "-Dconfig.file=`dirname $0`/application.conf")
 exec java $* -cp "`dirname $0`/lib/*" %s play.core.server.NettyServer `dirname $0` $@
-""", if (config.isEmpty()) "-Dconfig.file=`dirname $0`/application.conf" else "-Dconfig.file="+config+"/a$
+""", if (config.isEmpty()) "-Dconfig.file=`dirname $0`/application.conf" else "-Dconfig.file="+config+"/application.conf")
 
 
 
